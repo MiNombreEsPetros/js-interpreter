@@ -20,15 +20,4 @@ function download(filename, text) {
          
          download(filename, text);
          }, false);
-      </script>
-      <script>
-         // clear
-         function clr() {
-             if (confirm('Are you sure?')) {
-                 document.getElementById('main').value = '';
-             }
-         }
-         
-         function run() {
-             eval(document.getElementById('main').value);
-         }
+

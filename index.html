@@ -45,9 +45,21 @@ switch (operator) {
       <button  onclick="clr()">Clear</button>
       <button  onclick="run()">Run</button>
       <input id="myFile" type="file"/>
-      <input type="text" name="title" id="title" value="" placeholder="for example file.ref ">
+      <input type="text" name="title" id="title" value="" placeholder="for example file.js ">
       <input type="button" id="dwn-btn"  value="Download source code"/>
       <script src="js/upload.js"></script>
       <script src="js/download.js"></script>
+      <script>
+         // clear
+         function clr() {
+             if (confirm('Are you sure?')) {
+                 document.getElementById('main').value = '';
+             }
+         }
+         
+         function run() {
+             eval(document.getElementById('main').value);
+         }
+      </script>
    </body>
 </html>
