@@ -7,57 +7,47 @@
       <title>JS interpreter</title>
       <link rel="icon" href="images/main.jpg" >
       <link href="css/style.css" rel="stylesheet">
-      <style>
-         body {
-         font-family: sans-serif;
-         }
-         body {
-         background-color: lightblue;
-         }
-         a:hover {
-         color: red;
-         }
-         h1, h2, h3 {
-         font-weight: normal;
-         }
-         textarea {
-         font-family: monospace;
-         font-size: larger;
-         height: 15em;
-         width: 100%;
-         max-width: 111ex;
-         }
-         em {
-         padding: 0 1ex;
-         border: dotted 1px #888;
-         }
-      </style>
    </head>
    <body>
       <h1>JS interpreter</h1>
       <br>
-      <textarea id="main"></textarea>
+      <textarea id="main">
+
+
+var num1 = 5;
+
+
+var num2 = 5;
+
+
+
+var operator = '-';
+
+
+switch (operator) {
+    case '+':
+        alert (num1 + num2);
+        break;
+    case '-':
+        alert (num1 - num2);
+        break;
+    case '/':
+        alert (num1 / num2);
+        break;
+    case '*':
+        alert (num1 * num2);
+        
+     
+}
+
+      </textarea>
       <br>
       <button  onclick="clr()">Clear</button>
       <button  onclick="run()">Run</button>
       <input id="myFile" type="file"/>
       <input type="text" name="title" id="title" value="" placeholder="for example file.ref ">
       <input type="button" id="dwn-btn"  value="Download source code"/>
-      <script>
-         document.getElementById('myFile').addEventListener('change', function() {
-                 
-               var fr=new FileReader();
-         
-               fr.onload=function(){
-                   
-                   document.getElementById('main').textContent=fr.result;
-               }
-                 
-               fr.readAsText(this.files[0]);
-           }) 
-         
-      </script>
-      <script>
-      </script>
+      <script src="js/upload.js"></script>
+      <script src="js/download.js"></script>
    </body>
 </html>
